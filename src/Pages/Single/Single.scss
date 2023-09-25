@@ -1,0 +1,79 @@
+@use "../../scss//mixins.scss" as *;
+.single {
+  display: flex;
+  .content {
+    padding: 10px;
+    .top {
+      @include flex($gap: 20px);
+      .edit_button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px;
+        font-size: 12px;
+        color: #7451f8;
+        background-color: #7551f818;
+        cursor: pointer;
+        border-radius: 0px 0px 0 10px;
+      }
+      .left {
+        flex: 2.8;
+        position: relative;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 10px;
+        border-radius: 10px;
+        .title {
+          font-size: 25px;
+          font-weight: 800;
+          color: rgb(184, 182, 182);
+          margin-bottom: 10px;
+        }
+        .item {
+          display: flex;
+          @include flex($gap: 24px);
+          .itemImg {
+            @include circleImg(120px);
+          }
+          .details {
+            @include flex($direction: column, $gap: 25px);
+            .itemTitle,
+            .itemKey {
+              color: lightgray;
+            }
+            .itemTitle {
+              font-size: 35px;
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+            .detailItem {
+              @include flex($gap: 10px);
+              .itemKey {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        flex: 6;
+      }
+    }
+    .bottom {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 20px 10px;
+      border-radius: 10px;
+      margin-top: 20px;
+      height: 100%;
+      .itemTitle {
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(184, 182, 182);
+        margin-bottom: 20px;
+        margin-top: 0px;
+      }
+      .tableCell {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@mixin flex(
+  $direction: row,
+  $align-items: stretch,
+  $justify-content: flex-start,
+  $gap: 0
+) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+@mixin circleImg($dimensions, $objectFit: cover) {
+  width: $dimensions;
+  height: $dimensions;
+  border-radius: 50%;
+  object-fit: $objectFit;
+}
+
+@mixin box {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+@mixin box_title {
+  font-size: 25px;
+  font-weight: 800;
+  color: rgb(184, 182, 182);
+  margin-bottom: 10px;
+}

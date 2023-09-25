@@ -1,0 +1,67 @@
+@use "../../scss//mixins.scss" as *;
+.New {
+  .content {
+    padding: 10px;
+    .top {
+      @include box;
+      h1 {
+        @include box_title;
+      }
+    }
+    .bottom {
+      display: flex;
+      @include box;
+      .left {
+        @include flex($justify-content: center);
+        flex: 1;
+        img {
+          @include circleImg(180px);
+        }
+      }
+      .right {
+        flex: 2;
+        form {
+          transition: all 0.3s;
+          @include flex($justify-content: space-evenly, $gap: 30px);
+          flex-wrap: wrap;
+          .formInput {
+            width: 40%;
+            label {
+              margin-bottom: 5px;
+              @include flex($gap: 5px);
+              .icon {
+                cursor: pointer;
+              }
+            }
+            input {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid gray;
+              outline: none;
+            }
+          }
+          .formInput.icon {
+            font-size: 20px;
+            label {
+              @include flex($align-items: center);
+            }
+          }
+          button {
+            transition: all 0.4s;
+            width: 172px;
+            padding: 17px 2px;
+            border: none;
+            background-color: #009688;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

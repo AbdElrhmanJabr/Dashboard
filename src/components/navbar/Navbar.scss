@@ -1,0 +1,56 @@
+@use "../../scss//mixins.scss" as *;
+.navbar {
+  height: 50px;
+  border-bottom: 0.5px solid rgba(230, 227, 227);
+  @include flex($align-items: center);
+  font-size: 14px;
+  color: #555;
+  .wrapper {
+    display: flex;
+    @include flex($align-items: center, $justify-content: space-between);
+    padding: 20px;
+    width: 100%;
+    .search {
+      @include flex($align-items: center, $justify-content: space-between);
+      border: 0.5px solid lightgray;
+      padding: 4px;
+      width: 400px;
+      border-radius: 5px;
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        &::placeholder {
+          font-size: 15px;
+        }
+      }
+    }
+    .items {
+      @include flex($align-items: center, $gap: 20px);
+      .item {
+        @include flex($align-items: center);
+        position: relative;
+
+        svg {
+          font-size: 25px;
+        }
+        img {
+          @include circleImg(40px);
+        }
+        .counter {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+          @include flex($align-items: center, $justify-content: center);
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: 0;
+          right: -4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../scss//mixins.scss" as *;
+.Home {
+  display: flex;
+  .content {
+    padding: 10px;
+    .widgets,
+    .charts {
+      @include flex($justify-content: space-between, $gap: 20px);
+      width: 100%;
+    }
+    .charts {
+      margin-top: 20px;
+    }
+
+    .list_container {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 20px;
+      .list_title {
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(184, 182, 182);
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+
+  .content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .sidebar {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}

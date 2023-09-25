@@ -1,0 +1,66 @@
+$main-color: rgb(184, 182, 182);
+@use "../../scss//mixins.scss" as *;
+
+.featured {
+  flex: 3;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  .top {
+    @include flex($align-items: center, $justify-content: space-between);
+    padding: 2px 5px;
+    margin-bottom: 10px;
+    span {
+      font-size: 25px;
+      font-weight: 800;
+      color: $main-color;
+    }
+    svg {
+      color: $main-color;
+      font-weight: 800;
+      font-size: 27px;
+      cursor: pointer;
+    }
+  }
+  .bottom {
+    padding: 0px 40px;
+    @include flex($direction: column);
+    gap: 45px;
+    .percentage {
+      color: #03a9f4;
+      @include flex($justify-content: center);
+      margin-bottom: 10px;
+      svg {
+        width: 10rem;
+      }
+    }
+    .total_sales {
+      text-align: center;
+      h4 {
+        font-size: 18px;
+        color: $main-color;
+        font-weight: 800;
+      }
+      span {
+        font-size: 28px;
+      }
+      p {
+        color: $main-color;
+      }
+    }
+    .statics {
+      @include flex($align-items: center, $justify-content: space-between);
+      .static {
+        @include flex($direction: column, $align-items: center);
+        span:nth-child(1) {
+          color: $main-color;
+          margin-bottom: 10px;
+          font-size: 17px;
+        }
+        span:nth-child(2) {
+          @include flex($align-items: center);
+        }
+      }
+    }
+  }
+}

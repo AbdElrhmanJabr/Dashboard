@@ -1,0 +1,71 @@
+$main-color: #7451f8;
+@use "../../scss//mixins.scss" as *;
+
+.sidebar {
+  flex-basis: 15%;
+  min-height: 100vh;
+  border-right: 2px solid rgb(233, 231, 231);
+  background-color: white;
+  .top {
+    .logo {
+      @include flex($align-items: center, $justify-content: center);
+      height: 50px;
+      border-bottom: 2px solid rgb(233, 231, 231);
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #6439ff;
+      }
+    }
+  }
+
+  .center {
+    padding-left: 20px;
+    ul {
+      .title {
+        font-size: 16px;
+        color: #999;
+        font-weight: bold;
+      }
+      li {
+        @include flex($align-items: center, $gap: 5px);
+        cursor: pointer;
+        padding: 13px 8px;
+        border-radius: 4px;
+        &:hover {
+          background-color: #ece8ff;
+        }
+
+        .icon {
+          font-size: 20px;
+          color: $main-color;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 600;
+          color: #888;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    @include flex($align-items: center, $justify-content: center, $gap: 10px);
+    height: 65px;
+    .colorOption {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid $main-color;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        background-color: whitesmoke;
+      }
+      &:nth-child(2) {
+        background-color: #333;
+      }
+    }
+  }
+}
